@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{%  block content %}
+<p>Hello I update form</p>
+<form id="row_session" class="form-contol" action="" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input class="btn btn-primary" type="submit" name="Update" value="Update">
+</form>
+<div class="players">
+  {% for player in list_of_entry %}
+  <div class="player">
+    <form class="player_form form-control" action="{% url 'player-update' player.0.pk %}" method="post">
+    <div class="row">
+      {% csrf_token %}
+      {{ player.1.as_p }}
+      <button class="btn btn-primary" type="submit" name="button">Update</button>
+    </div>
+    </form>
+  </div>
+  {% endfor %}
+  <div class="player">
+  <form class="player_form form-control" action="{% url 'player-create' %}" method="post">
+    <div class="row">
+      {% csrf_token %}
+      {{ player_form.as_p }}
+      <button class="btn btn-success" type="submit" name="button">Create</button>
+    </div>
+  </form>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+  // $( document ).ready( function() {
+  //   $( "#row_session" ).submit(function( event ) {
+  //
+  //     alert($(this));
+  //     console.log($(this).data)
+  //     event.preventDefault();
+  //   });
+  // })
+</script>
+{% endblock %}

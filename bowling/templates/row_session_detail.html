@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block extra_css %}
+{% endblock extra_css %}
+{% block content %}
+
+<h1>{{rowsession.row.name}}</h1>
+<h3>{{rowsession.name}}</h3>
+<a href="{% url 'row_session-update' rowsession.pk %}"><button class="btn btn-primary" type="button" name="button">Update</button></a>
+<div class="row">
+  <div class="col-12 color_text_red" >
+    {% lorem 3 p %}
+  </div>
+</div>
+{% endblock content%}
