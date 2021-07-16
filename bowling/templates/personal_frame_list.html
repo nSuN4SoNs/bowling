@@ -21,7 +21,7 @@
       {% for personal_frame in personal_frame_list %}
       <tr>
         <th scope="row"><a href="/personal_frame/{{personal_frame.id}}">{{personal_frame.name}}</a></th>
-        <td><a href="{% url 'personal_frame_create' %}?personal_frame={{personal_frame.pk}}"><button class="btn btn-success" type="button" name="button">Add players</button></a></td>
+        <td><a href="{% url 'personal_frame_create' %}?personal_frame={{personal_frame.pk}}"><button class="btn btn-success" type="button" name="button">Add personal frames</button></a></td>
         <td><span class="btn btn-primary">OPEN</span></td>
       </tr>
       {% endfor %}

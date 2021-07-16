@@ -21,7 +21,7 @@
       {% for row_session in row_session_list %}
       <tr>
         <th scope="row_session"><a href="/row_session/{{row_session.id}}">{{row_session.name}}</a></th>
-        <td><a href="{% url 'row_session_create' %}?row_session={{row_session.pk}}"><button class="btn btn-success" type="button" name="button">Add players</button></a></td>
+        <td><a href="{% url 'row_session_create' %}?row_session={{row_session.pk}}"><button class="btn btn-success" type="button" name="button">Add row sessions</button></a></td>
         <td><span class="btn btn-primary">OPEN</span></td>
       </tr>
       {% endfor %}
