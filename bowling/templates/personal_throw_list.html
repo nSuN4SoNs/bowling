@@ -21,7 +21,7 @@
       {% for row in row_list %}
       <tr>
         <th scope="personal_throw"><a href="/personal_throw/{{personal_throw.id}}">{{personal_throw.name}}</a></th>
-        <td><a href="{% url 'personal_throw_create' %}?personal_throw={{personal_throw.pk}}"><button class="btn btn-success" type="button" name="button">Add personal throws</button></a></td>
+        <td><a href="{% url 'personal_throw_create' %}"><button class="btn btn-success" type="button" name="button">Add personal throws</button></a></td>
         <td><span class="btn btn-primary">OPEN</span></td>
       </tr>
       {% endfor %}
